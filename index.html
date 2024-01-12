@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>parrot</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <button id="start">Start Conversation</button>
-    <button id="stop" disabled>Stop Conversation</button>
-    <label for="voiceSelection">Choose a Voice:</label>
-    <select id="voiceSelection"></select>
-    <div id="log"></div>
+    <div class="chat-container">
+        <div id="log"></div>
+    </div>
+    <div class="control-panel">
+        <button id="start">Start Conversation</button>
+        <button id="stop" disabled>Stop Conversation</button>
+        <label for="voiceSelection">Choose a Voice:</label>
+        <select id="voiceSelection"></select>
+    </div>
     <script src="./parrot.js"></script>
 </body>
 </html>
