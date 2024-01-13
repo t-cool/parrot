@@ -1,5 +1,5 @@
 function getVoiceInput() {
-    recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
+    var recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
     recognition.lang = 'en-US';
     recognition.continuous = true;
 

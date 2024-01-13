@@ -1,8 +1,16 @@
-const startButton = document.getElementById('start');
-const stopButton = document.getElementById('stop');
+// チャット画面
 const log = document.getElementById('log');
+
+// 開始ボタン
+const startButton = document.getElementById('start');
+
+// 停止ボタン
+const stopButton = document.getElementById('stop');
+
+// 音声選択
 const voiceSelection = document.getElementById('voiceSelection');
-let recognition;
+
+// 音声認識中かの判定フラグ
 let listening = false;
 
 startButton.addEventListener('click', () => {
@@ -22,5 +30,3 @@ stopButton.addEventListener('click', () => {
     stopButton.disabled = true;
     log.innerHTML += '<p>Stopped listening.</p>';
 });
-
-populateVoiceList();

@@ -11,3 +11,4 @@ function populateVoiceList() {
 
 window.populateVoiceList = populateVoiceList;
 
+populateVoiceList();
