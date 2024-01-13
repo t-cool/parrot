@@ -21,7 +21,7 @@ startButton.addEventListener('click', () => {
     startButton.disabled = true;
     stopButton.disabled = false;
     log.innerHTML += '<p>Listening...</p>';
-    initiateRecognition();
+    getVoiceInput();
 });
 
 stopButton.addEventListener('click', () => {
@@ -33,7 +33,7 @@ stopButton.addEventListener('click', () => {
     log.innerHTML += '<p>Stopped listening.</p>';
 });
 
-function initiateRecognition() {
+function getVoiceInput() {
     recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
     recognition.lang = 'en-US';
     recognition.continuous = true;
@@ -41,23 +41,21 @@ function initiateRecognition() {
     recognition.onresult = (event) => {
         const text = event.results[event.results.length - 1][0].transcript;
         log.innerHTML += `<p>User said: ${text}</p>`;
-        recognition.stop(); // 一時停止してから返答する
+        recognition.stop();
     };
 
     recognition.onend = () => {
-        if (listening) respond();
+        if (listening) readAloudTexts();
     };
 
     recognition.start();
 }
 
-function respond() {
+function readAloudTexts() {
     const lastText = log.textContent.split('User said:').pop().split('\n')[0].trim();
     const speechSynthesis = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance();
     utterance.lang = 'en-US';
-
-    // ユーザーの発話をそのままオウム返し
     utterance.text = lastText;
 
     const selectedVoice = englishVoices[voiceSelection.value];
@@ -69,6 +67,6 @@ function respond() {
     speechSynthesis.speak(utterance);
 
     utterance.onend = () => {
-        if (listening) initiateRecognition(); // 応答後に再度認識を開始
+        if (listening) getVoiceInput();
     };
 }
