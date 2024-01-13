@@ -12,6 +12,7 @@ const voiceSelection = document.getElementById('voiceSelection');
 
 // 音声認識中かの判定フラグ
 let listening = false;
+let recognition;
 
 startButton.addEventListener('click', () => {
     if (listening) return;
