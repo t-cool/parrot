@@ -7,15 +7,30 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
+    <!-- 1. Chat -->
     <div class="chat-container">
         <div id="log"></div>
     </div>
+
+    <!-- 2. コントロール・エリア -->
     <div class="control-panel">
+        <!-- 2-1 開始ボタン -->
         <button id="start">Start Conversation</button>
+        <!-- 2-2 停止ボタン -->
         <button id="stop" disabled>Stop Conversation</button>
-        <label for="voiceSelection">Choose a Voice:</label>
+        <!-- 2-3 音声切り替え -->
         <select id="voiceSelection"></select>
     </div>
-    <script src="./parrot.js"></script>
+
+    <!-- スクリプト -->
+    <!-- 音声認識 -->
+    <script src="./speechRecognition.js"></script>
+    <!-- 音声再生 -->
+    <script src="./speechSynthesis.js"></script>
+    <!-- 音声選択 -->
+    <script src="./voiceList.js"></script>
+    <!-- UI 上のロジック -->
+    <script src="./main.js"></script>
 </body>
 </html>
