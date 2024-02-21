@@ -25,7 +25,3 @@ function speakResponse(utterance) {
     log.innerHTML += `<p>Sim : ${utterance.text}</p>`;
     window.speechSynthesis.speak(utterance);
 }
-
-window.readAloudTexts = readAloudTexts;
-window.getLastUserInput = getLastUserInput;
-window.speakResponse = speakResponse;

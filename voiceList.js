@@ -9,6 +9,4 @@ function populateVoiceList() {
     voiceSelection.innerHTML = englishVoices.map((voice, index) => `<option value="${index}">${voice.name} (${voice.lang})</option>`).join('');
 }
 
-window.populateVoiceList = populateVoiceList;
-
 populateVoiceList();

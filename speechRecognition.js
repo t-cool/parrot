@@ -1,4 +1,5 @@
 function getVoiceInput() {
+    
     recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
     recognition.lang = 'en-US';
     recognition.continuous = true;
@@ -19,6 +20,3 @@ function getVoiceInput() {
 function processRecognitionResult(text) {
     log.innerHTML += `<p>You : ${text}</p>`;
 }
-
-window.getVoiceInput = getVoiceInput;
-window.processRecognitionResult = processRecognitionResult;
