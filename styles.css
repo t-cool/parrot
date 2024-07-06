@@ -101,7 +101,7 @@ button:disabled {
 
 /* 追加部分 */
 #voiceSelection {
-    width: 200px; /* 固定幅 */
+    width: 150px; /* 固定幅 */
     white-space: normal; /* 折り返しを有効にする */
     overflow-wrap: break-word; /* 長い単語を折り返す */
 }
