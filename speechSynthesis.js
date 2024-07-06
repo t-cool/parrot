@@ -2,10 +2,10 @@ function readAloudTexts() {
     const lastText = getLastUserInput();
     const speechSynthesis = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance();
-    utterance.lang = 'en-US';
+    utterance.lang = languageSelection.value; // 言語選択の値を使用
     utterance.text = lastText;
 
-    const selectedVoice = englishVoices[voiceSelection.value];
+    const selectedVoice = voices[voiceSelection.value];
     if (selectedVoice) {
         utterance.voice = selectedVoice;
     }

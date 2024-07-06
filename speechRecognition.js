@@ -1,7 +1,6 @@
 function getVoiceInput() {
-    
     recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
-    recognition.lang = 'en-US';
+    recognition.lang = languageSelection.value; // 言語選択の値を使用
     recognition.continuous = true;
 
     recognition.onresult = (event) => {
