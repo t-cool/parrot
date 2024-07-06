@@ -65,6 +65,43 @@ button:disabled {
     background-color: #cccccc;
 }
 
+.control-panel {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, select {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+}
+
 .control-panel label {
     margin-right: 10px;
+}
+
+/* 追加部分 */
+#voiceSelection {
+    width: 200px; /* 固定幅 */
+    white-space: normal; /* 折り返しを有効にする */
+    overflow-wrap: break-word; /* 長い単語を折り返す */
 }
