@@ -15,10 +15,6 @@
 
     <!-- コントロール・エリア -->
     <div class="control-panel">
-        <!-- 開始ボタン -->
-        <button id="start">Start</button>
-        <!-- 停止ボタン -->
-        <button id="stop" disabled>Stop</button>
         <!-- 言語選択 -->
         <label for="languageSelection"></label>
         <select id="languageSelection">
@@ -28,6 +24,11 @@
         </select>
         <!-- 音声切り替え -->
         <select id="voiceSelection"></select>
+
+        <!-- 開始ボタン -->
+        <button id="start">Start</button>
+        <!-- 停止ボタン -->
+        <button id="stop" disabled>Stop</button>
     </div>
     <!-- 音声認識 -->
     <script src="./speechRecognition.js"></script>
